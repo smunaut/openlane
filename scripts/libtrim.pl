@@ -21,6 +21,8 @@ use strict;
 use feature "switch";
 #use experimental qw( switch );
 
+no warnings 'experimental';
+
 open (CELLS,'<', $ARGV[1]) or die("Couldn't open $ARGV[1]");
 
 my @cells = ();
