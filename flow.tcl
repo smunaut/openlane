@@ -36,7 +36,7 @@ proc run_non_interactive_mode {args} {
 	gen_pdn
 	run_routing
 
-	if { $::env(DIODE_INSERTION_STRATEGY) == 2 } {
+	if { ($::env(DIODE_INSERTION_STRATEGY) == 2) || ($::env(DIODE_INSERTION_STRATEGY) == 5) } {
 		run_antenna_check
 		heal_antenna_violators; # modifies the routed DEF
 	}
